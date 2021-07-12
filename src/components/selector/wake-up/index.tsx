@@ -32,9 +32,7 @@ export default function WakeUp(props: IWakeUpProps): JSX.Element {
 		handleResults(results)
 	}
 
-	React.useEffect(() => {
-		setTimeValue(timeNow)
-	}, [timeNow])
+	React.useEffect(() => setTimeValue(timeNow), [timeNow])
 
 	return (
 		<div className="w-3/4 md:w-2/4 mx-auto">
