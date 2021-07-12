@@ -27,6 +27,7 @@ const securityHeaders = [
 
 module.exports = {
 	reactStrictMode: true,
+	jsconfigPaths: true,
 	async headers() {
 		return [
 			{
