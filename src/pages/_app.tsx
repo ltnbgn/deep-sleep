@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
 import 'tailwindcss/tailwind.css'
-import './index.css'
+import './app.css'
 
 export default function MyApp(props: AppProps) {
 	const { Component, pageProps } = props
