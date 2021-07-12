@@ -26,7 +26,7 @@ export default function GoBed(props: IGoBedProps): JSX.Element {
 		const selectedTime = moment(timeValue, [`hh:mm`])
 		const results: string[] = []
 
-		results.push(selectedTime.minutes(selectedTime.minutes() - 375).format(`hh:mm A`))
+		results.push(selectedTime.minutes(selectedTime.minutes() - 465).format(`hh:mm A`))
 		results.push(selectedTime.minutes(selectedTime.minutes() - 90).format(`hh:mm A`))
 
 		handleResults(results)
