@@ -11,10 +11,8 @@ export default function MyApp(props: AppProps) {
 		<>
 			<Head>
 				<title>Гүн нойр</title>
-				<meta
-					name="viewport"
-					content="minimum-scale=1, initial-scale=1, width=device-width"
-				/>
+				<meta charSet="utf-8" />
+				<meta name="viewport" content="initial-scale=1, width=device-width" />
 			</Head>
 			<Component {...pageProps} />
 		</>

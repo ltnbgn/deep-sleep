@@ -14,4 +14,13 @@ a {
 
 * {
   	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance:none;
+	appearance: none;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
 }
