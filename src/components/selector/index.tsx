@@ -6,41 +6,41 @@ import Result from '@/components/selector/results'
 import { baseButtonStyle } from '@/styles'
 
 export default function Selector(): JSX.Element {
-	const [content, setContent] = React.useState<number>(0)
-	const [results, setResults] = React.useState<string[]>([])
+  const [content, setContent] = React.useState<number>(0)
+  const [results, setResults] = React.useState<string[]>([])
 
-	function handleBack(): void {
-		setContent(0)
-		setResults([])
-	}
+  function handleBack(): void {
+    setContent(0)
+    setResults([])
+  }
 
-	function handleResults(value: string[]): void {
-		setResults(value)
-		setContent(3)
-	}
+  function handleResults(value: string[]): void {
+    setResults(value)
+    setContent(3)
+  }
 
-	if (content === 1) return <WakeUp handleResults={handleResults} handleBack={handleBack} />
-	if (content === 2) return <GoBed handleResults={handleResults} handleBack={handleBack} />
-	if (content === 3) return <Result results={results} handleBack={handleBack} />
+  if (content === 1) return <WakeUp handleResults={handleResults} handleBack={handleBack} />
+  if (content === 2) return <GoBed handleResults={handleResults} handleBack={handleBack} />
+  if (content === 3) return <Result results={results} handleBack={handleBack} />
 
-	return (
-		<div className="w-3/4 md:w-2/4 mx-auto">
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center">
-				<button
-					type="button"
-					className={clsx(baseButtonStyle, `bg-primary text-gray-800`)}
-					onClick={() => setContent(1)}
-				>
+  return (
+    <div className="w-3/4 md:w-2/4 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center">
+        <button
+          type="button"
+          className={clsx(baseButtonStyle, `bg-primary text-gray-800`)}
+          onClick={() => setContent(1)}
+        >
 					Сэрэх цаг тооцоолох
-				</button>
-				<button
-					type="button"
-					className={clsx(baseButtonStyle, `bg-primary text-gray-800`)}
-					onClick={() => setContent(2)}
-				>
+        </button>
+        <button
+          type="button"
+          className={clsx(baseButtonStyle, `bg-primary text-gray-800`)}
+          onClick={() => setContent(2)}
+        >
 					Унтах цаг тооцоолох
-				</button>
-			</div>
-		</div>
-	)
+        </button>
+      </div>
+    </div>
+  )
 }
